@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/">Marketplace</a>
+
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <span class="nav-link">
+          <i class="bi-wallet2" style="font-size: 1.5rem; color: cornflowerblue;"></i>
+          <span>{{ count$ | async | currency }}</span>
+        </span>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/basket"><i class="bi-basket" style="font-size: 1.5rem; color: cornflowerblue;"></i>
+          Basket
+          <span>({{ (basketCount$ | async)?.length }})</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

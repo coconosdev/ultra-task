@@ -1,0 +1,19 @@
+.text-error {
+  color: crimson;
+}
+
+.successWrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+  h2 {
+    font-size: 40px;
+    font-weight: 500;
+  }
+  .btn {
+    margin-top: 30px;
+    font-size: 25px;
+  }
+}

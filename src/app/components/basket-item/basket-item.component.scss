@@ -1,0 +1,19 @@
+.product {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  .card-body {
+    min-width: 200px;
+  }
+
+  i {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.product-list {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-self: center;
+  gap: 15px;
+
+  > * {
+    flex-basis: 19%;
+  }
+}

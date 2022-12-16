@@ -1,0 +1,10 @@
+<div class="card product">
+  <img class="card-img" [src]="product.img" [alt]="product.productName">
+  <div class="card-body">
+    <h5 class="card-title">{{product.productName}}</h5>
+    <p class="card-text">{{product.price | currency}}</p>
+  </div>
+  <div>
+    <i class="bi-trash" style="font-size: 1.5rem; color: cornflowerblue;" (click)="removeProductFromBasket(product)"></i>
+  </div>
+</div>

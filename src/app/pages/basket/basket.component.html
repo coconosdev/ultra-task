@@ -1,0 +1,16 @@
+<div class="basket-wrapper" *ngIf="basketList$ | async as basketList">
+  <app-basket-list [basketList]="basketList"></app-basket-list>
+  <div class="button-wrapper" *ngIf="basketList.length > 0">
+    <app-total></app-total>
+    <a routerLink="/checkout">
+      <button type="button" class="btn btn-primary" [disabled]="!(canCheckout$ | async)">Checkout</button>
+    </a>
+  </div>
+
+  <div class="button-wrapper" *ngIf="basketList.length === 0">
+    <div class="text">Looks like you have an empty basket, go to the home page to add something!</div>
+    <a routerLink="/home">
+      <button type="button" class="btn btn-primary" [disabled]="!(canCheckout$ | async)">Go home</button>
+    </a>
+  </div>
+</div>

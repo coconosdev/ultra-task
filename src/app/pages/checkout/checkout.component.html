@@ -1,0 +1,53 @@
+<div class="checkout-wrapper">
+  <form [formGroup]="payForm" (ngSubmit)="onSaveForm()" *ngIf="!successfulBuy">
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" class="form-control" placeholder="Fist name" formControlName="firstName">
+      <div class="form-error" *ngIf="firstName?.['invalid'] && firstName?.['dirty']">
+        <small class="form-text text-error" *ngIf="firstName?.errors?.['required']">First name is required</small>
+        <small class="form-text text-error" *ngIf="firstName?.errors?.['minlength']">First name must be at least 5 characters long</small>
+      </div>
+      <input type="text" class="form-control" placeholder="Last name" formControlName="lastName">
+      <div class="form-error" *ngIf="lastName?.['invalid'] && lastName?.['dirty']">
+        <small class="form-text text-error" *ngIf="lastName?.errors?.['required']">Last name is required</small>
+        <small class="form-text text-error" *ngIf="lastName?.errors?.['minlength']">Last name must be at least 5 characters long</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Address</label>
+      <input type="text" class="form-control" placeholder="Street" formControlName="street">
+      <div class="form-error" *ngIf="street?.['invalid'] && street?.['dirty']">
+        <small class="form-text text-error" *ngIf="street?.errors?.['required']">Street is required</small>
+        <small class="form-text text-error" *ngIf="street?.errors?.['minlength']">Street must be at least 5 characters long</small>
+      </div>
+      <input type="text" class="form-control" placeholder="City" formControlName="city">
+      <div class="form-error" *ngIf="city?.['invalid'] && city?.['dirty']">
+        <small class="form-text text-error" *ngIf="city?.errors?.['required']">City is required</small>
+        <small class="form-text text-error" *ngIf="city?.errors?.['minlength']">City must be at least 5 characters long</small>
+      </div>
+      <input type="text" class="form-control" placeholder="State" formControlName="state">
+      <div class="form-error" *ngIf="state?.['invalid'] && state?.['dirty']">
+        <small class="form-text text-error" *ngIf="state?.errors?.['required']">State is required</small>
+        <small class="form-text text-error" *ngIf="state?.errors?.['minlength']">State must be at least 5 characters long</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Email address</label>
+      <input type="email" class="form-control" placeholder="Enter email" formControlName="email">
+      <div class="form-error" *ngIf="email?.['invalid'] && email?.['dirty']">
+        <small class="form-text text-error" *ngIf="email?.errors?.['required']">Email is required</small>
+        <small class="form-text text-error" *ngIf="email?.errors?.['pattern']">Email should be valid</small>
+      </div>
+    </div>
+    <app-total></app-total>
+    <button type="submit" class="btn btn-primary" [disabled]="payForm.invalid">Pay</button>
+  </form>
+
+  <div class="successWrapper" *ngIf="successfulBuy">
+    <h2>Thank you for your purchase!</h2>
+    <a routerLink="/">
+      <button type="button" class="btn btn-primary">Buy more</button>
+    </a>
+  </div>
+
+</div>
