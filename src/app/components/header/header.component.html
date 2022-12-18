@@ -6,13 +6,13 @@
       <li class="nav-item active">
         <span class="nav-link">
           <i class="bi-wallet2" style="font-size: 1.5rem; color: cornflowerblue;"></i>
-          <span>{{ count$ | async | currency }}</span>
+          <span class="wallet-count">{{ count$ | async | currency }}</span>
         </span>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="/basket"><i class="bi-basket" style="font-size: 1.5rem; color: cornflowerblue;"></i>
           Basket
-          <span>({{ (basketCount$ | async)?.length }})</span>
+          <span class="basket-count">({{ (basketCount$ | async)?.length }})</span>
         </a>
       </li>
     </ul>

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { Product, ProductList } from 'src/app/types/products';
+import { Product } from 'src/app/types/products';
 import { MarketStore } from 'src/app/types/store';
 import { REMOVE_PRODUCT_FROM_BASKET } from 'src/app/store/basket/basket.actions';
 

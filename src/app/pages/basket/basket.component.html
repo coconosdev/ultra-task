@@ -10,7 +10,7 @@
   <div class="button-wrapper" *ngIf="basketList.length === 0">
     <div class="text">Looks like you have an empty basket, go to the home page to add something!</div>
     <a routerLink="/home">
-      <button type="button" class="btn btn-primary" [disabled]="!(canCheckout$ | async)">Go home</button>
+      <button type="button" class="btn btn-primary">Go home</button>
     </a>
   </div>
 </div>
