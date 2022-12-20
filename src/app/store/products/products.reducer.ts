@@ -63,7 +63,7 @@ export const initialState = [
   {
     id: 10,
     productName: 'A hamster',
-    price: 49,
+    price: 4999,
     img: 'https://t1.ea.ltmcdn.com/es/razas/1/0/5/hamster-dorado_501_0_600.jpg',
   },
 ];
