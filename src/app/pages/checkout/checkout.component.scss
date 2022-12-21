@@ -1,5 +1,9 @@
+.checkout-wrapper {
+  padding-top: 20px;
+}
+
 .text-error {
-  color: crimson;
+  color: #ff7675;
 }
 
 .successWrapper {
@@ -8,12 +12,72 @@
   align-items: center;
   justify-content: center;
   padding: 100px;
+
   h2 {
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 600;
+    color: #fff;
   }
   .btn {
     margin-top: 30px;
     font-size: 25px;
+  }
+}
+
+label {
+  color: #fff;
+  font-weight: 600;
+}
+
+.form-control {
+  background: rgba(37, 34, 41, 0.6);
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
+  color: #fff;
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+
+  + & {
+    margin-top: 10px;
+  }
+}
+
+.form-error {
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+}
+
+.form-group {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.form-column {
+  flex-basis: 49%;
+  position: relative;
+
+  &--full-width {
+    flex-basis: 100%;
+  }
+}
+
+.button-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-end;
+
+  .btn-primary {
+    width: 400px;
+    font-weight: 600;
+    margin-left: auto;
+    height: 45px;
+    line-height: 45px;
+    padding: 0;
   }
 }

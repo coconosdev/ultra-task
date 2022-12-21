@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./app/styles/theme.scss";
+
+*,
+*::before,
+*::after {
+  font-family: "Jost", sans-serif;
+}
+
+html,
+body {
+  background-color: rgba(40, 38, 44, 0.6);
+  height: 100vh;
+}
+
+.btn-primary {
+  background-color: $primary;
+  border: none;
+
+  &:disabled {
+    background-color: #999;
+  }
+}

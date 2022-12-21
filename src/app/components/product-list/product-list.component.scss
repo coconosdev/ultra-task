@@ -1,11 +1,19 @@
 .product-list {
   display: flex;
   flex-flow: row wrap;
-  align-items: flex-start;
-  justify-self: center;
+  align-items: stretch;
+  justify-content: center;
   gap: 15px;
 
   > * {
-    flex-basis: 19%;
+    @media (min-width: 768px) {
+      flex-basis: 48%;
+    }
+    @media (min-width: 992px) {
+      flex-basis: 28%;
+    }
+    @media (min-width: 1200px) {
+      flex-basis: 18%;
+    }
   }
 }

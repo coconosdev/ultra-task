@@ -1,10 +1,20 @@
+@import "../../styles/theme.scss";
+
+.navbar {
+  background-color: rgba(34, 37, 41, 0.8);
+}
 .navbar-brand {
   font-weight: 600;
   padding-left: 15px;
+  text-transform: lowercase;
+  font-size: 40px;
+  color: #fff;
 }
 
-i {
+.header-icon {
   padding-right: 5px;
+  font-size: 1.5rem;
+  color: $primary;
 }
 
 .navbar-nav {
@@ -13,4 +23,14 @@ i {
   align-items: center;
   justify-content: flex-end;
   width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.nav-link {
+  color: #fff;
+}
+
+.nav-item {
+  margin-left: 15px;
 }

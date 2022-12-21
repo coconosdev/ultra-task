@@ -1,5 +1,23 @@
+@import "../../styles/theme.scss";
+
+:host {
+  display: flex;
+  height: 100%;
+}
+
 .product {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 15px;
   transition: 0.2s all ease-in-out;
+  background-color: rgba(40, 38, 44, 0.6);
+  color: white;
+
+  &--on-basket {
+    border: 2px solid $primary;
+  }
 
   img {
     max-width: 100%;
@@ -7,6 +25,19 @@
 
   &:hover {
     cursor: pointer;
-    background-color: #eaeaea;
+    background-color: rgba(40, 38, 44, 1);
   }
+}
+
+.product-body {
+  margin-top: 10px;
+}
+
+.card-title {
+  font-weight: 600;
+  color: white;
+}
+
+.card-text {
+  opacity: 0.7;
 }

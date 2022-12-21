@@ -1,3 +1,5 @@
+@import "../../styles/theme.scss";
+
 .product {
   display: flex;
   flex-flow: row nowrap;
@@ -5,15 +7,30 @@
   justify-content: space-between;
   max-width: 450px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 15px;
+  background-color: rgba(40, 38, 44, 0.6);
+  color: white;
 
-  .card-body {
+  .product-body {
+    padding-left: 15px;
     min-width: 200px;
   }
 
-  i {
+  .basket-icon {
+    font-size: 1.5rem;
+    color: $primary;
+
     &:hover {
       cursor: pointer;
     }
   }
+}
+
+.card-title {
+  font-weight: 600;
+  color: white;
+}
+
+.card-text {
+  opacity: 0.7;
 }

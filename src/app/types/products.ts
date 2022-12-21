@@ -3,6 +3,7 @@ export type Product = {
   img: string | null;
   productName: string;
   price: number;
+  selected: boolean;
 };
 
 export type ProductList = Product[];
